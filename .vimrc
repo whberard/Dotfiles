@@ -16,3 +16,10 @@ filetype indent on
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+
+
+""""""
+" Sage settings (from Franco Saliola)
+autocmd BufRead,BufNewFile *.sage,*.pyx,*.spyx set filetype=python
+autocmd Filetype python set tabstop=4|set shiftwidth=4|set expandtab
+autocmd FileType python set makeprg=sage\ -b\ &&\ sage\ -t\ %
